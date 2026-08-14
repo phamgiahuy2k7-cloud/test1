@@ -210,14 +210,14 @@
   .service-card li::before{content:'→'; position:absolute; left:0; color:var(--emerald); font-weight:700;}
 
   /* INDUSTRIES */
-  .industry-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .industry-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
   .industry-card{
     background:var(--white); border:1px solid var(--gray-line); border-radius:12px;
-    padding:24px 18px; text-align:center; transition:transform .2s ease, border-color .2s ease, background .2s ease;
+    min-height:148px; padding:24px 18px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:transform .2s ease, border-color .2s ease, background .2s ease;
   }
   .industry-card:hover{transform:translateY(-3px); border-color:var(--emerald); background:var(--emerald-tint);}
-  .industry-card .ic{font-size:26px;}
-  .industry-card p{margin-top:10px; font-family:var(--label); font-weight:600; font-size:13.5px; color:var(--navy);}
+  .industry-card .ic{font-size:27px;line-height:1;}
+  .industry-card p{min-height:21px;margin:12px 0 0;display:flex;align-items:center;justify-content:center;font-family:var(--label);font-weight:700;font-size:13px;letter-spacing:.02em;color:var(--navy);white-space:nowrap;}
 
   /* METHODOLOGY */
   .method-track{position:relative; margin-top:20px;}
@@ -423,7 +423,7 @@
         <h1 style="margin-top:18px;">Đồng hành cùng doanh nghiệp trên hành trình <em>tăng trưởng bền vững</em></h1>
         <p class="lede">Chúng tôi cung cấp dịch vụ tư vấn quản trị, chiến lược kinh doanh, chuyển đổi số và đào tạo lãnh đạo giúp doanh nghiệp nâng cao hiệu quả vận hành và năng lực cạnh tranh.</p>
         <div class="cta-row">
-          <a href="#contact" class="btn btn-primary">Đăng ký tư vấn</a>
+          <a href="#consultation-form" data-center-scroll class="btn btn-primary">Đăng ký tư vấn</a>
           <a href="#services" class="btn btn-ghost">Tìm hiểu dịch vụ</a>
         </div>
       </div>
@@ -700,7 +700,7 @@
   </div>
 </section>
 
-<a class="quick-cta btn btn-primary" href="#contact" aria-label="Đi tới biểu mẫu nhận tư vấn">Nhận tư vấn</a>
+<a class="quick-cta btn btn-primary" href="#consultation-form" data-center-scroll aria-label="Đi tới biểu mẫu nhận tư vấn">Nhận tư vấn</a>
 
 <!-- FOOTER -->
 <footer>
@@ -746,7 +746,8 @@
     event.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
     if(!target) return;
-    const top = target.getBoundingClientRect().top + scrollY - Math.max(18, (innerHeight - target.offsetHeight) / 2);
+    const focusPoint = target.querySelector('h3') || target;
+    const top = focusPoint.getBoundingClientRect().top + scrollY - (innerHeight / 2 - focusPoint.offsetHeight / 2);
     scrollTo({top:Math.max(0, top), behavior:'smooth'});
     history.replaceState(null, '', link.getAttribute('href'));
   }));
