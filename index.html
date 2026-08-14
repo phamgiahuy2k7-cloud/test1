@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Công ty Tư vấn Quản trị Kinh doanh | Chiến lược – Vận hành – Chuyển đổi số</title>
+<meta name="description" content="Giải pháp tư vấn quản trị doanh nghiệp, chiến lược kinh doanh, tối ưu vận hành và chuyển đổi số giúp doanh nghiệp tăng trưởng bền vững.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Apex Advisory",
+  "description": "Giải pháp tư vấn quản trị doanh nghiệp, chiến lược kinh doanh, tối ưu vận hành và chuyển đổi số giúp doanh nghiệp tăng trưởng bền vững.",
+  "areaServed": "VN",
+  "serviceType": ["Tư vấn quản trị", "Chuyển đổi số", "Đào tạo quản lý"]
+}
+</script>
+<style>
+  :root{
+    --navy: #0F172A;
+    --navy-2: #16213A;
+    --emerald: #10B981;
+    --emerald-dim: #0B8F67;
+    --emerald-tint: #ECFDF5;
+    --white: #FFFFFF;
+    --gray: #F1F5F9;
+    --gray-line: #E2E8F0;
+    --slate: #64748B;
+    --ink: #0F172A;
+    --display: 'Poppins', sans-serif;
+    --body: 'Inter', sans-serif;
+    --label: 'Montserrat', sans-serif;
+    --maxw: 1180px;
+    --radius: 14px;
+    --shadow: 0 20px 45px -20px rgba(15,23,42,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--display); margin:0; color:var(--navy); line-height:1.15;}
+  p{margin:0;}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--label);
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--emerald-dim);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:''; width:22px; height:2px; background:var(--emerald); display:inline-block; border-radius:2px;}
+  .section{padding:100px 0;}
+  .section-dark{background:var(--navy); color:#E7EAF0;}
+  .section-dark h2, .section-dark h3{color:var(--white);}
+  .section-tint{background:var(--gray);}
+  .head{max-width:640px; margin-bottom:56px;}
+  .head h2{font-size:clamp(28px,3.4vw,40px); margin-top:14px;}
+  .head p.lede{margin-top:16px; color:var(--slate); font-size:17px;}
+  .section-dark .head p.lede{color:#AAB3C5;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--label); font-weight:700; font-size:13.5px;
+    letter-spacing:.03em; text-transform:uppercase;
+    padding:15px 28px; border-radius:9px; cursor:pointer;
+    border:1.5px solid transparent; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+  }
+  .btn-primary{background:var(--emerald); color:var(--navy);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 30px -10px rgba(16,185,129,.55);}
+  .btn-ghost{border-color:rgba(255,255,255,.35); color:var(--white);}
+  .btn-ghost:hover{border-color:var(--emerald); color:var(--emerald); transform:translateY(-2px);}
+  .btn-ghost-dark{border-color:var(--navy); color:var(--navy);}
+  .btn-ghost-dark:hover{border-color:var(--emerald-dim); color:var(--emerald-dim); transform:translateY(-2px);}
+
+  /* NAV */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(15,23,42,.86); backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  nav{max-width:var(--maxw); margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{font-family:var(--display); font-weight:700; font-size:19px; color:var(--white); display:flex; align-items:center; gap:9px;}
+  .logo .dot{width:9px; height:9px; border-radius:2px; background:var(--emerald); transform:rotate(45deg); display:inline-block;}
+  .nav-links{display:flex; gap:30px; list-style:none; margin:0; padding:0;}
+  .nav-links a{font-family:var(--label); font-size:13px; font-weight:600; letter-spacing:.03em; color:#C7CDDA; transition:color .2s;}
+  .nav-links a:hover{color:var(--emerald);}
+  .nav-cta{display:flex; align-items:center; gap:18px;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
+  .burger span{width:22px; height:2px; background:var(--white); display:block;}
+
+  /* HERO */
+  .hero{
+    position:relative; overflow:hidden;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(16,185,129,.18), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    padding:190px 0 120px;
+    color:var(--white);
+  }
+  .hero::after{
+    content:''; position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.6) 40%, transparent 90%);
+    pointer-events:none;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; position:relative;}
+  .hero h1{font-size:clamp(34px, 4.6vw, 54px); font-weight:700; letter-spacing:-.01em;}
+  .hero h1 em{font-style:normal; color:var(--emerald);}
+  .hero .lede{margin-top:22px; font-size:18px; color:#B7BFCF; max-width:520px;}
+  .hero .cta-row{margin-top:38px; display:flex; gap:16px; flex-wrap:wrap;}
+  .hero-visual{position:relative;}
+  .panel{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px; padding:26px; backdrop-filter:blur(6px);
+  }
+  .panel-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;}
+  .panel-head .tag{font-family:var(--label); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8B95AB;}
+  .panel-head .live{display:flex; align-items:center; gap:6px; font-size:11px; color:var(--emerald); font-family:var(--label); font-weight:600;}
+  .live i{width:7px; height:7px; border-radius:50%; background:var(--emerald); display:inline-block; box-shadow:0 0 0 0 rgba(16,185,129,.6); animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.55);} 70%{box-shadow:0 0 0 8px rgba(16,185,129,0);} 100%{box-shadow:0 0 0 0 rgba(16,185,129,0);}}
+  .chart-svg{width:100%; height:150px; display:block;}
+  .panel-metrics{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px;}
+  .panel-metrics div{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:12px 14px;}
+  .panel-metrics .num{font-family:var(--display); font-weight:700; font-size:19px; color:var(--white);}
+  .panel-metrics .lab{font-size:11px; color:#8B95AB; margin-top:3px;}
+
+  .kpi-strip{
+    margin-top:80px; display:grid; grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(255,255,255,.12); padding-top:44px; position:relative;
+  }
+  .kpi-strip div{text-align:left; border-left:1px solid rgba(255,255,255,.12); padding-left:22px;}
+  .kpi-strip div:first-child{border-left:none; padding-left:0;}
+  .kpi-num{font-family:var(--display); font-weight:800; font-size:clamp(28px,3vw,38px); color:var(--emerald);}
+  .kpi-lab{font-size:13.5px; color:#AAB3C5; margin-top:6px;}
+
+  /* PROBLEM */
+  .pain-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .pain-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:var(--radius);
+    padding:28px 24px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .pain-card:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:transparent;}
+  .pain-icon{width:44px; height:44px; border-radius:10px; background:var(--emerald-tint); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
+  .pain-card h4{font-size:16.5px; font-weight:600;}
+  .pain-card p{margin-top:8px; color:var(--slate); font-size:14.5px;}
+  .problem-note{
+    margin-top:44px; padding:26px 28px; border-radius:var(--radius);
+    background:var(--navy); color:#D6DBE5; font-size:15.5px; border-left:4px solid var(--emerald);
+  }
+
+  /* SOLUTION */
+  .solution-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .solution-card{
+    border-radius:18px; padding:34px 28px; background:var(--white);
+    border:1px solid var(--gray-line); position:relative; overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .solution-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .solution-card .num{
+    font-family:var(--display); font-weight:800; font-size:14px; color:var(--emerald);
+    letter-spacing:.05em; margin-bottom:14px; display:block;
+  }
+  .solution-card h3{font-size:20px;}
+  .solution-card p{margin-top:10px; color:var(--slate); font-size:15px;}
+  .solution-card::after{
+    content:''; position:absolute; right:-30px; bottom:-30px; width:120px; height:120px;
+    border-radius:50%; background:var(--emerald-tint); z-index:-1;
+  }
+
+  /* SERVICES */
+  .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .service-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:var(--radius);
+    padding:30px 26px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s;
+  }
+  .service-card:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--emerald);}
+  .service-card h4{font-size:17px; display:flex; align-items:center; gap:10px;}
+  .service-card h4 .ic{width:8px; height:8px; background:var(--emerald); border-radius:2px; transform:rotate(45deg); flex:none;}
+  .service-card ul{margin:16px 0 0; padding-left:0; list-style:none;}
+  .service-card li{
+    font-size:14.5px; color:var(--slate); padding:8px 0 8px 20px; position:relative;
+    border-top:1px solid var(--gray-line);
+  }
+  .service-card li:first-child{border-top:none; padding-top:0;}
+  .service-card li::before{content:'→'; position:absolute; left:0; color:var(--emerald); font-weight:700;}
+
+  /* INDUSTRIES */
+  .industry-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .industry-card{
+    background:var(--white); border:1px solid var(--gray-line); border-radius:12px;
+    padding:24px 18px; text-align:center; transition:transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .industry-card:hover{transform:translateY(-3px); border-color:var(--emerald); background:var(--emerald-tint);}
+  .industry-card .ic{font-size:26px;}
+  .industry-card p{margin-top:10px; font-family:var(--label); font-weight:600; font-size:13.5px; color:var(--navy);}
+
+  /* METHODOLOGY */
+  .method-track{position:relative; margin-top:20px;}
+  .method-line{
+    position:absolute; top:26px; left:0; right:0; height:2px;
+    background:linear-gradient(90deg, var(--emerald) 0%, rgba(16,185,129,.15) 100%);
+  }
+  .method-steps{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; position:relative;}
+  .method-step .mk{
+    width:52px; height:52px; border-radius:50%; background:var(--navy-2);
+    border:2px solid var(--emerald); color:var(--emerald); font-family:var(--display); font-weight:700;
+    display:flex; align-items:center; justify-content:center; font-size:17px; margin-bottom:20px; position:relative; z-index:2;
+  }
+  .method-step h4{color:var(--white); font-size:15.5px; font-weight:600; line-height:1.4;}
+  .method-flow{
+    margin-top:56px; display:flex; align-items:center; justify-content:space-between;
+    font-family:var(--label); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:#8B95AB; flex-wrap:wrap; gap:10px;
+  }
+  .method-flow span.arrow{color:var(--emerald);}
+
+  /* SUCCESS STORIES */
+  .case-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .case-card{
+    border-radius:var(--radius); padding:30px 26px; background:var(--white);
+    border:1px solid var(--gray-line); transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .case-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .case-figure{font-family:var(--display); font-weight:800; font-size:38px; color:var(--emerald);}
+  .case-card p{margin-top:10px; color:var(--slate); font-size:14.5px;}
+  .case-tag{display:inline-block; margin-top:16px; font-family:var(--label); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); background:var(--gray); padding:5px 10px; border-radius:5px;}
+
+  /* WHY US */
+  .why-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px 32px;}
+  .why-item{display:flex; gap:14px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--gray-line);}
+  .why-check{
+    width:26px; height:26px; border-radius:50%; background:var(--emerald); color:var(--navy);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; flex:none; margin-top:2px;
+  }
+  .why-item p{color:var(--ink); font-size:15.5px; font-weight:500;}
+
+  /* TEAM */
+  .team-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:20px;}
+  .team-card{text-align:left;}
+  .team-photo{
+    width:100%; aspect-ratio:1/1; border-radius:14px;
+    background:linear-gradient(155deg, var(--navy) 0%, var(--navy-2) 60%, var(--emerald-dim) 130%);
+    position:relative; overflow:hidden; margin-bottom:14px;
+  }
+  .team-photo::after{content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 30% 20%, rgba(255,255,255,.12), transparent 55%);}
+  .team-card h4{font-size:15.5px;}
+  .team-card .role{font-family:var(--label); font-size:12px; color:var(--emerald-dim); font-weight:700; margin-top:4px; letter-spacing:.03em;}
+  .team-card p.bio{margin-top:8px; font-size:13.5px; color:var(--slate); line-height:1.5;}
+
+  /* PRICING */
+  .price-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;}
+  .price-card{
+    border-radius:18px; padding:36px 30px; border:1px solid var(--gray-line); background:var(--white);
+    display:flex; flex-direction:column; transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .price-card:hover{transform:translateY(-5px); box-shadow:var(--shadow);}
+  .price-card.featured{background:var(--navy); border-color:var(--navy); color:var(--white); transform:scale(1.03);}
+  .price-card.featured h3, .price-card.featured .tier-note{color:var(--white);}
+  .price-card .badge{
+    align-self:flex-start; font-family:var(--label); font-size:11px; font-weight:700; letter-spacing:.08em;
+    text-transform:uppercase; background:var(--emerald); color:var(--navy); padding:5px 10px; border-radius:6px; margin-bottom:16px;
+  }
+  .price-card h3{font-size:20px;}
+  .price-card .tier-note{color:var(--slate); font-size:14px; margin-top:8px;}
+  .price-card ul{list-style:none; padding:0; margin:26px 0; flex:1;}
+  .price-card li{
+    font-size:14.5px; padding:10px 0; display:flex; gap:10px; align-items:center;
+    border-top:1px solid rgba(148,163,184,.25);
+  }
+  .price-card li:first-child{border-top:none;}
+  .price-card .dot-li{width:6px; height:6px; border-radius:50%; background:var(--emerald); flex:none;}
+  .price-card .btn{justify-content:center; width:100%;}
+
+  /* FAQ */
+  .faq-list{max-width:820px;}
+  .faq-item{border-bottom:1px solid var(--gray-line);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 0; display:flex; justify-content:space-between; align-items:center;
+    font-family:var(--display); font-weight:600; font-size:16.5px; color:var(--navy);
+  }
+  .faq-q .plus{
+    width:26px; height:26px; border-radius:50%; border:1.5px solid var(--gray-line);
+    display:flex; align-items:center; justify-content:center; flex:none; transition:transform .3s ease, background .3s ease, border-color .3s ease;
+    font-size:15px; color:var(--emerald-dim);
+  }
+  .faq-item.open .faq-q .plus{transform:rotate(45deg); background:var(--emerald); border-color:var(--emerald); color:var(--navy);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+  .faq-a p{padding-bottom:22px; color:var(--slate); font-size:15px; max-width:680px;}
+
+  /* FINAL CTA */
+  .final-cta{
+    text-align:center; padding:110px 0;
+    background:radial-gradient(700px 350px at 50% 0%, rgba(16,185,129,.22), transparent 70%), var(--navy);
+    color:var(--white);
+  }
+  .final-cta h2{font-size:clamp(28px,3.6vw,42px); color:var(--white); max-width:720px; margin:0 auto;}
+  .final-cta .lede{margin:20px auto 0; max-width:560px; color:#B7BFCF; font-size:16.5px;}
+  .final-cta .cta-row{margin-top:36px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer{background:#0A0F1E; color:#8B95AB; padding:70px 0 30px;}
+  .footer-grid{display:grid; grid-template-columns:1.6fr repeat(4,1fr); gap:30px;}
+  .footer-logo{font-family:var(--display); font-weight:700; font-size:19px; color:var(--white); display:flex; align-items:center; gap:9px;}
+  .footer-desc{margin-top:14px; font-size:13.5px; line-height:1.7; max-width:280px;}
+  .footer-col h5{font-family:var(--label); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#C7CDDA; margin-bottom:16px;}
+  .footer-col a{display:block; font-size:13.5px; padding:6px 0; color:#8B95AB; transition:color .2s;}
+  .footer-col a:hover{color:var(--emerald);}
+  .footer-bottom{
+    margin-top:56px; padding-top:26px; border-top:1px solid rgba(255,255,255,.08);
+    display:flex; justify-content:space-between; align-items:center; font-size:12.5px; flex-wrap:wrap; gap:14px;
+  }
+  .social{display:flex; gap:12px;}
+  .social a{width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,.15); display:flex; align-items:center; justify-content:center; font-size:12px;}
+  .social a:hover{border-color:var(--emerald); color:var(--emerald);}
+
+  /* REVEAL */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  .r1{transition-delay:.05s;} .r2{transition-delay:.15s;} .r3{transition-delay:.25s;} .r4{transition-delay:.35s;} .r5{transition-delay:.45s;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1; transform:none; transition:none;}
+    .live i{animation:none;}
+  }
+
+  @media (max-width:1024px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{order:-1;}
+    .kpi-strip{grid-template-columns:repeat(2,1fr); row-gap:28px;}
+    .kpi-strip div:nth-child(3){border-left:none;}
+    .pain-grid,.solution-grid,.service-grid,.case-grid{grid-template-columns:repeat(2,1fr);}
+    .industry-grid{grid-template-columns:repeat(3,1fr);}
+    .method-steps{grid-template-columns:repeat(3,1fr);}
+    .team-grid{grid-template-columns:repeat(3,1fr);}
+    .price-card.featured{transform:none;}
+    .why-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .burger{display:flex;}
+    .section{padding:70px 0;}
+    .pain-grid,.solution-grid,.service-grid,.case-grid,.price-grid{grid-template-columns:1fr;}
+    .industry-grid{grid-template-columns:repeat(2,1fr);}
+    .method-steps{grid-template-columns:1fr 1fr;}
+    .method-line{display:none;}
+    .team-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .hero{padding-top:150px;}
+  }
+  :focus-visible{outline:2px solid var(--emerald); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo"><span class="dot"></span>Apex Advisory</a>
+    <ul class="nav-links">
+      <li><a href="#services">Dịch vụ</a></li>
+      <li><a href="#methodology">Phương pháp</a></li>
+      <li><a href="#cases">Thành công</a></li>
+      <li><a href="#team">Đội ngũ</a></li>
+      <li><a href="#pricing">Bảng giá</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary" style="padding:11px 20px;">Đăng ký tư vấn</a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Tư vấn Quản trị Doanh nghiệp</span>
+        <h1 style="margin-top:18px;">Đồng hành cùng doanh nghiệp trên hành trình <em>tăng trưởng bền vững</em></h1>
+        <p class="lede">Chúng tôi cung cấp dịch vụ tư vấn quản trị, chiến lược kinh doanh, chuyển đổi số và đào tạo lãnh đạo giúp doanh nghiệp nâng cao hiệu quả vận hành và năng lực cạnh tranh.</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Đăng ký tư vấn</a>
+          <a href="#services" class="btn btn-ghost">Tìm hiểu dịch vụ</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="panel">
+          <div class="panel-head">
+            <span class="tag">Dashboard quản trị doanh nghiệp</span>
+            <span class="live"><i></i>Trực tuyến</span>
+          </div>
+          <svg class="chart-svg" viewBox="0 0 400 150" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10B981" stop-opacity="0.45"/>
+                <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <polyline points="0,120 40,110 80,95 120,100 160,75 200,80 240,55 280,60 320,30 360,35 400,10" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" id="growthLine"/>
+            <polygon points="0,120 40,110 80,95 120,100 160,75 200,80 240,55 280,60 320,30 360,35 400,10 400,150 0,150" fill="url(#chartFill)"/>
+          </svg>
+          <div class="panel-metrics">
+            <div><div class="num">+35%</div><div class="lab">Doanh thu</div></div>
+            <div><div class="num">-20%</div><div class="lab">Chi phí VH</div></div>
+            <div><div class="num">+40%</div><div class="lab">Năng suất</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-strip">
+      <div><div class="kpi-num" data-count="500" data-suffix="+">0</div><div class="kpi-lab">Doanh nghiệp đồng hành</div></div>
+      <div><div class="kpi-num" data-count="95" data-suffix="%">0</div><div class="kpi-lab">Khách hàng hài lòng</div></div>
+      <div><div class="kpi-num" data-count="10" data-suffix="+">0</div><div class="kpi-lab">Năm kinh nghiệm</div></div>
+      <div><div class="kpi-num" data-count="100" data-suffix="+">0</div><div class="kpi-lab">Chuyên gia tư vấn</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Thách thức</span>
+      <h2>Doanh nghiệp đang gặp những thách thức gì?</h2>
+      <p class="lede">Trong môi trường cạnh tranh ngày càng khốc liệt, doanh nghiệp cần một hệ thống quản trị hiệu quả để duy trì tăng trưởng và nâng cao năng lực cạnh tranh.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal r1"><div class="pain-icon">📉</div><h4>Doanh thu tăng trưởng chậm</h4><p>Thiếu động lực mới để bứt phá trong giai đoạn thị trường bão hòa.</p></div>
+      <div class="pain-card reveal r2"><div class="pain-icon">📊</div><h4>Thiếu dữ liệu hỗ trợ ra quyết định</h4><p>Quyết định dựa trên cảm tính thay vì số liệu vận hành thực tế.</p></div>
+      <div class="pain-card reveal r3"><div class="pain-icon">⚙️</div><h4>Quy trình vận hành chưa tối ưu</h4><p>Nhiều bước thừa, chồng chéo trách nhiệm giữa các phòng ban.</p></div>
+      <div class="pain-card reveal r1"><div class="pain-icon">👥</div><h4>Khó khăn trong quản lý nhân sự</h4><p>Thiếu hệ thống đánh giá hiệu suất và lộ trình phát triển rõ ràng.</p></div>
+      <div class="pain-card reveal r2"><div class="pain-icon">💰</div><h4>Chi phí vận hành cao</h4><p>Nguồn lực chưa được phân bổ đúng trọng tâm chiến lược.</p></div>
+      <div class="pain-card reveal r3"><div class="pain-icon">🌐</div><h4>Chậm thích nghi chuyển đổi số</h4><p>Công nghệ chưa được ứng dụng để tăng tốc độ ra quyết định.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Giải pháp</span>
+      <h2>Giải pháp quản trị toàn diện cho doanh nghiệp</h2>
+      <p class="lede">Chúng tôi kết hợp kinh nghiệm quản trị thực tiễn, công nghệ hiện đại và tư duy chiến lược để giúp doanh nghiệp tối ưu hiệu quả hoạt động.</p>
+    </div>
+    <div class="solution-grid">
+      <div class="solution-card reveal r1"><span class="num">01 — Chiến lược</span><h3>📈 Tư vấn Chiến lược</h3><p>Xây dựng tầm nhìn, mục tiêu và lộ trình phát triển phù hợp với năng lực doanh nghiệp.</p></div>
+      <div class="solution-card reveal r2"><span class="num">02 — Vận hành</span><h3>⚙️ Tối ưu Vận hành</h3><p>Chuẩn hóa quy trình, loại bỏ điểm nghẽn và nâng cao hiệu suất toàn hệ thống.</p></div>
+      <div class="solution-card reveal r3"><span class="num">03 — Công nghệ</span><h3>💡 Chuyển đổi số</h3><p>Ứng dụng công nghệ để tăng tốc tăng trưởng và ra quyết định dựa trên dữ liệu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Dịch vụ</span>
+      <h2>Dịch vụ của chúng tôi</h2>
+      <p class="lede">Danh mục dịch vụ tư vấn toàn diện, thiết kế riêng theo quy mô và ngành nghề của từng doanh nghiệp.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal r1"><h4><span class="ic"></span>Strategic Management Consulting</h4><ul><li>Chiến lược tăng trưởng</li><li>Kế hoạch kinh doanh</li><li>Mô hình kinh doanh</li></ul></div>
+      <div class="service-card reveal r2"><h4><span class="ic"></span>Human Resource Management</h4><ul><li>Hệ thống KPI</li><li>Đánh giá hiệu suất</li><li>Phát triển đội ngũ lãnh đạo</li></ul></div>
+      <div class="service-card reveal r3"><h4><span class="ic"></span>Financial Management</h4><ul><li>Quản trị tài chính</li><li>Kiểm soát chi phí</li><li>Phân tích hiệu quả đầu tư</li></ul></div>
+      <div class="service-card reveal r1"><h4><span class="ic"></span>Digital Transformation</h4><ul><li>ERP</li><li>CRM</li><li>Business Intelligence</li></ul></div>
+      <div class="service-card reveal r2"><h4><span class="ic"></span>Corporate Training</h4><ul><li>Kỹ năng quản lý</li><li>Lãnh đạo</li><li>Quản trị dự án</li></ul></div>
+      <div class="service-card reveal r3"><h4><span class="ic"></span>Startup Advisory</h4><ul><li>Gọi vốn</li><li>Xây dựng mô hình kinh doanh</li><li>Chiến lược tăng trưởng</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Lĩnh vực</span>
+      <h2>Ngành nghề chúng tôi phục vụ</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal r1"><div class="ic">🏭</div><p>Sản xuất</p></div>
+      <div class="industry-card reveal r2"><div class="ic">🏢</div><p>Dịch vụ</p></div>
+      <div class="industry-card reveal r3"><div class="ic">🛒</div><p>Bán lẻ</p></div>
+      <div class="industry-card reveal r4"><div class="ic">💻</div><p>Công nghệ</p></div>
+      <div class="industry-card reveal r1"><div class="ic">🏥</div><p>Y tế</p></div>
+      <div class="industry-card reveal r2"><div class="ic">🎓</div><p>Giáo dục</p></div>
+      <div class="industry-card reveal r3"><div class="ic">🚚</div><p>Logistics</p></div>
+      <div class="industry-card reveal r4"><div class="ic">🌾</div><p>Nông nghiệp</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section section-dark" id="methodology">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Quy trình</span>
+      <h2>Phương pháp triển khai</h2>
+      <p class="lede">Quy trình 5 bước được chuẩn hóa, áp dụng nhất quán cho mọi dự án tư vấn.</p>
+    </div>
+    <div class="method-track">
+      <div class="method-line"></div>
+      <div class="method-steps">
+        <div class="method-step reveal r1"><div class="mk">01</div><h4>Đánh giá hiện trạng doanh nghiệp</h4></div>
+        <div class="method-step reveal r2"><div class="mk">02</div><h4>Phân tích dữ liệu &amp; xác định vấn đề</h4></div>
+        <div class="method-step reveal r3"><div class="mk">03</div><h4>Thiết kế giải pháp quản trị</h4></div>
+        <div class="method-step reveal r4"><div class="mk">04</div><h4>Triển khai &amp; đào tạo</h4></div>
+        <div class="method-step reveal r5"><div class="mk">05</div><h4>Theo dõi KPI &amp; cải tiến liên tục</h4></div>
+      </div>
+    </div>
+    <div class="method-flow reveal">
+      <span>Assessment</span><span class="arrow">→</span><span>Analysis</span><span class="arrow">→</span><span>Strategy</span><span class="arrow">→</span><span>Execution</span><span class="arrow">→</span><span>Growth</span>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="section" id="cases">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Kết quả</span>
+      <h2>Câu chuyện thành công</h2>
+    </div>
+    <div class="case-grid">
+      <div class="case-card reveal r1"><div class="case-figure">+35%</div><p>Tăng doanh thu sau 12 tháng triển khai chiến lược tăng trưởng toàn diện.</p><span class="case-tag">Doanh nghiệp sản xuất</span></div>
+      <div class="case-card reveal r2"><div class="case-figure">-20%</div><p>Giảm chi phí vận hành nhờ chuẩn hóa quy trình và tối ưu nguồn lực.</p><span class="case-tag">Chuỗi bán lẻ</span></div>
+      <div class="case-card reveal r3"><div class="case-figure">+40%</div><p>Tăng năng suất nhân sự sau khi triển khai hệ thống KPI và đào tạo lãnh đạo.</p><span class="case-tag">Doanh nghiệp dịch vụ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section-tint">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Lý do lựa chọn</span>
+      <h2>Tại sao doanh nghiệp lựa chọn chúng tôi?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal r1"><div class="why-check">✓</div><p>Đội ngũ chuyên gia giàu kinh nghiệm</p></div>
+      <div class="why-item reveal r1"><div class="why-check">✓</div><p>Phương pháp quản trị thực tiễn</p></div>
+      <div class="why-item reveal r2"><div class="why-check">✓</div><p>Triển khai đồng hành cùng doanh nghiệp</p></div>
+      <div class="why-item reveal r2"><div class="why-check">✓</div><p>Ứng dụng dữ liệu trong ra quyết định</p></div>
+      <div class="why-item reveal r3"><div class="why-check">✓</div><p>Giải pháp phù hợp từng quy mô doanh nghiệp</p></div>
+      <div class="why-item reveal r3"><div class="why-check">✓</div><p>Cam kết hiệu quả và kết quả đo lường được</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Con người</span>
+      <h2>Đội ngũ chuyên gia</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal r1"><div class="team-photo"></div><h4>Nguyễn Minh Khôi</h4><p class="role">CEO &amp; Founder</p><p class="bio">15 năm kinh nghiệm tư vấn chiến lược cho doanh nghiệp vừa và lớn.</p></div>
+      <div class="team-card reveal r2"><div class="team-photo"></div><h4>Trần Bảo Anh</h4><p class="role">Chuyên gia Chiến lược</p><p class="bio">Chuyên sâu về hoạch định tăng trưởng và mô hình kinh doanh.</p></div>
+      <div class="team-card reveal r3"><div class="team-photo"></div><h4>Lê Hoàng Nam</h4><p class="role">Chuyên gia Tài chính</p><p class="bio">Kiểm soát chi phí và tối ưu hiệu quả đầu tư cho doanh nghiệp.</p></div>
+      <div class="team-card reveal r4"><div class="team-photo"></div><h4>Phạm Thu Hà</h4><p class="role">Chuyên gia Nhân sự</p><p class="bio">Xây dựng hệ thống KPI và phát triển đội ngũ lãnh đạo kế cận.</p></div>
+      <div class="team-card reveal r5"><div class="team-photo"></div><h4>Vũ Đức Long</h4><p class="role">Chuyên gia Chuyển đổi số</p><p class="bio">Triển khai ERP, CRM và hệ thống Business Intelligence.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-tint" id="pricing">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Bảng giá</span>
+      <h2>Gói dịch vụ tư vấn</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card reveal r1">
+        <h3>Basic Consulting</h3>
+        <p class="tier-note">Dành cho doanh nghiệp nhỏ</p>
+        <ul>
+          <li><span class="dot-li"></span>2 buổi tư vấn/tháng</li>
+          <li><span class="dot-li"></span>Đánh giá cơ bản</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost-dark">Nhận báo giá tư vấn</a>
+      </div>
+      <div class="price-card featured reveal r2">
+        <span class="badge">Phổ biến nhất</span>
+        <h3>Business Growth</h3>
+        <p class="tier-note">Dành cho doanh nghiệp đang mở rộng</p>
+        <ul>
+          <li><span class="dot-li"></span>Tư vấn chiến lược</li>
+          <li><span class="dot-li"></span>Hệ thống KPI</li>
+          <li><span class="dot-li"></span>Tối ưu vận hành</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Nhận báo giá tư vấn</a>
+      </div>
+      <div class="price-card reveal r3">
+        <h3>Enterprise Transformation</h3>
+        <p class="tier-note">Dành cho doanh nghiệp lớn</p>
+        <ul>
+          <li><span class="dot-li"></span>Chuyển đổi số</li>
+          <li><span class="dot-li"></span>Quản trị toàn diện</li>
+          <li><span class="dot-li"></span>Đồng hành dài hạn</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost-dark">Nhận báo giá tư vấn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Hỏi đáp</span>
+      <h2>Câu hỏi thường gặp</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Doanh nghiệp nào phù hợp với dịch vụ?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Chúng tôi phục vụ doanh nghiệp thuộc mọi quy mô, từ startup đến tập đoàn lớn, trong nhiều lĩnh vực khác nhau.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Thời gian triển khai bao lâu?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Thời gian tùy thuộc vào phạm vi dự án, thường dao động từ 1 đến 6 tháng cho một chu trình tư vấn đầy đủ.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Có hỗ trợ đào tạo nhân sự không?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Có. Chương trình đào tạo quản lý và lãnh đạo là một phần trong các gói tư vấn của chúng tôi.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Có tư vấn online không?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Có, chúng tôi hỗ trợ tư vấn trực tuyến song song với các buổi làm việc trực tiếp tại doanh nghiệp.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Có cam kết KPI không?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Có. Mỗi dự án đều đi kèm bộ chỉ số đo lường hiệu quả cụ thể, được thống nhất ngay từ đầu.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;">Bắt đầu ngay</span>
+    <h2 style="margin-top:16px;">Sẵn sàng nâng tầm năng lực quản trị doanh nghiệp?</h2>
+    <p class="lede">Liên hệ với đội ngũ chuyên gia để nhận tư vấn và xây dựng lộ trình phát triển phù hợp.</p>
+    <div class="cta-row">
+      <a href="#" class="btn btn-primary">Đăng ký tư vấn miễn phí</a>
+      <a href="#" class="btn btn-ghost">Liên hệ chuyên gia</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><span class="dot" style="width:9px;height:9px;background:var(--emerald);display:inline-block;transform:rotate(45deg);border-radius:2px;"></span>Apex Advisory</div>
+        <p class="footer-desc">Đối tác tư vấn quản trị kinh doanh, chiến lược, vận hành và chuyển đổi số cho doanh nghiệp Việt Nam.</p>
+        <div class="social" style="margin-top:20px;">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Công ty</h5><a href="#">Giới thiệu</a><a href="#services">Dịch vụ</a><a href="#cases">Dự án</a><a href="#">Tin tức</a></div>
+      <div class="footer-col"><h5>Nghề nghiệp</h5><a href="#">Tuyển dụng</a><a href="#team">Đội ngũ</a><a href="#">Văn hóa</a></div>
+      <div class="footer-col"><h5>Liên hệ</h5><a href="#contact">Liên hệ</a><a href="#pricing">Bảng giá</a><a href="#faq">FAQ</a></div>
+      <div class="footer-col"><h5>Pháp lý</h5><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản sử dụng</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apex Advisory. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế cho doanh nghiệp hiện đại.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Counter animation
+  const counters = document.querySelectorAll('.kpi-num');
+  const counterIO = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        const target = parseInt(el.dataset.count,10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1400;
+        const start = performance.now();
+        function tick(now){
+          const p = Math.min((now-start)/duration, 1);
+          const eased = 1 - Math.pow(1-p, 3);
+          el.textContent = Math.round(eased*target) + suffix;
+          if(p<1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterIO.unobserve(el);
+      }
+    });
+  }, {threshold:0.5});
+  counters.forEach(c=>counterIO.observe(c));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Mobile menu (simple toggle of nav links)
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', ()=>{
+    const isShown = navLinks.style.display === 'flex';
+    navLinks.style.display = isShown ? 'none' : 'flex';
+    navLinks.style.cssText += isShown ? '' : 'position:absolute; top:64px; left:0; right:0; background:#0F172A; flex-direction:column; padding:20px 28px; gap:16px; border-bottom:1px solid rgba(255,255,255,.08);';
+  });
+</script>
+
+</body>
+</html>
