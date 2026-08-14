@@ -435,7 +435,7 @@
   <nav class="wrap">
     <a href="#home" class="logo"><span class="dot"></span>NB1</a>
     <ul class="nav-links">
-      <li><a href="#home">Trang chủ</a></li><li><a href="#about">Về chúng tôi</a></li><li class="services-menu"><button class="services-toggle" type="button" aria-expanded="false">Dịch vụ</button><div class="services-submenu"><a href="#pricing">Gói tư vấn theo bài toán doanh nghiệp</a><a href="#training">Phát triển năng lực quản lý cho đội ngũ</a><a href="#why-us">Tại sao doanh nghiệp lựa chọn NB1?</a><a href="#solutions">Giải pháp quản trị toàn diện</a></div></li><li><a href="#cases">Dự án</a></li><li><a href="#training">Đào tạo</a></li><li><a href="#insights">Kiến thức</a></li>
+      <li><a href="#home">Trang chủ</a></li><li><a href="#about">Về chúng tôi</a></li><li class="services-menu"><button class="services-toggle" type="button" aria-expanded="false">Dịch vụ</button><div class="services-submenu"><a href="#pricing">Gói tư vấn</a><a href="#training">Đào tạo quản lý</a><a href="#why-us">Vì sao chọn NB1</a><a href="#solutions">Giải pháp toàn diện</a></div></li><li><a href="#cases">Dự án</a></li><li><a href="#training">Đào tạo</a></li><li><a href="#insights">Kiến thức</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#consultation-form" class="btn btn-primary" data-center-scroll style="padding:11px 20px;">Đăng ký tư vấn</a>
@@ -757,8 +757,9 @@
     event.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
     if(!target) return;
-    const focusPoint = target.querySelector('h3') || target;
-    const top = focusPoint.getBoundingClientRect().top + scrollY - (innerHeight / 2 - focusPoint.offsetHeight / 2);
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const availableHeight = innerHeight - headerHeight;
+    const top = target.getBoundingClientRect().top + scrollY - headerHeight - Math.max(20, (availableHeight - target.offsetHeight) / 2);
     scrollTo({top:Math.max(0, top), behavior:'smooth'});
     history.replaceState(null, '', link.getAttribute('href'));
   }));
