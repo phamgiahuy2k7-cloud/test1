@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[COMPANY NAME] | Tư vấn Quản trị, Chiến lược & Chuyển đổi số</title>
+<title>NB1 | Tư vấn Quản trị, Chiến lược & Chuyển đổi số</title>
 <meta name="description" content="Giải pháp tư vấn quản trị doanh nghiệp, chiến lược kinh doanh, tối ưu vận hành và chuyển đổi số giúp doanh nghiệp tăng trưởng bền vững.">
 <link rel="canonical" href="https://example.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="[COMPANY NAME] | Tư vấn Quản trị & Chuyển đổi số">
+<meta property="og:title" content="NB1 | Tư vấn Quản trị & Chuyển đổi số">
 <meta property="og:description" content="Giải pháp tư vấn quản trị, chiến lược, vận hành và chuyển đổi số cho doanh nghiệp.">
 <meta property="og:url" content="https://example.com/">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,10 +16,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Organization","@id":"https://example.com/#organization","name":"[COMPANY NAME]","url":"https://example.com/","description":"Đối tác tư vấn quản trị, chiến lược, vận hành và chuyển đổi số cho doanh nghiệp Việt Nam."},
- {"@type":"ProfessionalService","@id":"https://example.com/#professional-service","name":"[COMPANY NAME]","url":"https://example.com/","parentOrganization":{"@id":"https://example.com/#organization"},"areaServed":"VN","serviceType":"Tư vấn quản trị doanh nghiệp"},
- {"@type":"ConsultingService","@id":"https://example.com/#consulting","name":"[COMPANY NAME]","serviceType":["Tư vấn chiến lược","Tối ưu vận hành","Chuyển đổi số","Đào tạo quản lý"]},
- {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Doanh nghiệp nào phù hợp với dịch vụ?","acceptedAnswer":{"@type":"Answer","text":"[COMPANY NAME] sẽ đánh giá mức độ phù hợp theo bối cảnh, mục tiêu và phạm vi tư vấn của từng doanh nghiệp."}},{"@type":"Question","name":"Thời gian triển khai bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Thời gian triển khai được xác định sau phiên trao đổi và chẩn đoán ban đầu, dựa trên mục tiêu cùng phạm vi dự án."}}]},
+ {"@type":"Organization","@id":"https://example.com/#organization","name":"NB1","url":"https://example.com/","description":"Đối tác tư vấn quản trị, chiến lược, vận hành và chuyển đổi số cho doanh nghiệp Việt Nam."},
+ {"@type":"ProfessionalService","@id":"https://example.com/#professional-service","name":"NB1","url":"https://example.com/","parentOrganization":{"@id":"https://example.com/#organization"},"areaServed":"VN","serviceType":"Tư vấn quản trị doanh nghiệp"},
+ {"@type":"ConsultingService","@id":"https://example.com/#consulting","name":"NB1","serviceType":["Tư vấn chiến lược","Tối ưu vận hành","Chuyển đổi số","Đào tạo quản lý"]},
+ {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Doanh nghiệp nào phù hợp với dịch vụ?","acceptedAnswer":{"@type":"Answer","text":"NB1 sẽ đánh giá mức độ phù hợp theo bối cảnh, mục tiêu và phạm vi tư vấn của từng doanh nghiệp."}},{"@type":"Question","name":"Thời gian triển khai bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Thời gian triển khai được xác định sau phiên trao đổi và chẩn đoán ban đầu, dựa trên mục tiêu cùng phạm vi dự án."}}]},
  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://example.com/"},{"@type":"ListItem","position":2,"name":"Dịch vụ","item":"https://example.com/#services"}]}
 ]}
 </script>
@@ -98,12 +98,20 @@
     background:rgba(15,23,42,.86); backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,255,255,.08);
   }
-  nav{max-width:var(--maxw); margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between;}
+  header > nav.wrap{max-width:var(--maxw); margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between;}
   .logo{font-family:var(--display); font-weight:700; font-size:19px; color:var(--white); display:flex; align-items:center; gap:9px;}
   .logo .dot{width:9px; height:9px; border-radius:2px; background:var(--emerald); transform:rotate(45deg); display:inline-block;}
   .nav-links{display:flex; gap:16px; list-style:none; margin:0; padding:0;}
   .nav-links a{font-family:var(--label); font-size:11.5px; font-weight:600; letter-spacing:.02em; color:#D4D8DE; transition:color .2s;white-space:nowrap;}
   .nav-links a:hover{color:var(--emerald);}
+  .nav-links li{position:relative;}
+  .services-toggle{font-family:var(--label); font-size:11.5px; font-weight:600; letter-spacing:.02em; color:#D4D8DE; cursor:pointer; background:none; border:0; padding:0; white-space:nowrap;}
+  .services-toggle::after{content:'⌄'; margin-left:5px; color:var(--emerald); font-size:13px;}
+  .services-toggle:hover{color:var(--emerald);}
+  .services-submenu{display:none; position:absolute; top:calc(100% + 18px); left:50%; transform:translateX(-50%); width:246px; padding:9px; border-radius:10px; background:#272B31; border:1px solid rgba(255,255,255,.11); box-shadow:0 16px 28px rgba(0,0,0,.22);}
+  .services-menu.open .services-submenu{display:grid; gap:2px;}
+  .services-submenu a{padding:10px 12px; border-radius:6px; color:#E7EAF0; font-size:11px; white-space:normal; line-height:1.35;}
+  .services-submenu a:hover{background:rgba(212,106,76,.16); color:var(--white);}
   .nav-cta{display:flex; align-items:center; gap:18px;}
   .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
   .burger span{width:22px; height:2px; background:var(--white); display:block;}
@@ -191,6 +199,25 @@
     content:''; position:absolute; right:-30px; bottom:-30px; width:120px; height:120px;
     border-radius:50%; background:var(--emerald-tint); z-index:-1;
   }
+
+  /* NB1 SOLUTION OVERVIEW */
+  .nb1-overview{min-height:auto; padding:96px 0;}
+  .nb1-overview .head{max-width:720px; margin-bottom:42px;}
+  .nb1-card-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+  .nb1-card{
+    min-height:310px; padding:28px 24px; border:1px solid var(--gray-line); border-radius:18px;
+    background:var(--white); display:flex; flex-direction:column; position:relative; overflow:hidden;
+    transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  }
+  .nb1-card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:var(--emerald);}
+  .nb1-card::after{content:''; width:112px; height:112px; border-radius:50%; background:var(--emerald-tint); position:absolute; right:-44px; bottom:-48px; z-index:0;}
+  .nb1-card > *{position:relative; z-index:1;}
+  .nb1-card .nb1-num{font:800 12px var(--label); letter-spacing:.12em; color:var(--emerald-dim);}
+  .nb1-card h3{font-size:19px; margin-top:18px; min-height:66px;}
+  .nb1-card p{color:var(--slate); font-size:14.5px; margin-top:12px;}
+  .nb1-card .nb1-link{margin-top:auto; padding-top:22px; font:700 12px var(--label); letter-spacing:.06em; text-transform:uppercase; color:var(--navy); display:inline-flex; align-items:center; gap:8px;}
+  .nb1-card .nb1-link span{color:var(--emerald-dim); font-size:18px; line-height:1; transition:transform .2s ease;}
+  .nb1-card:hover .nb1-link span{transform:translateX(4px);}
 
   /* SERVICES */
   .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
@@ -366,11 +393,13 @@
 
   @media (max-width:1024px){
     .nav-links{display:none;}.burger{display:flex;}
+    .nav-links.mobile-open{display:flex;position:absolute;top:64px;left:0;right:0;background:#272B31;flex-direction:column;padding:20px 28px;gap:16px;border-bottom:1px solid rgba(255,255,255,.08);}
+    .services-submenu{position:static; transform:none; width:100%; margin-top:12px; box-shadow:none; background:rgba(255,255,255,.05);}
     .hero-grid{grid-template-columns:1fr;}
     .hero-visual{order:-1;}
     .kpi-strip{grid-template-columns:repeat(2,1fr); row-gap:28px;}
     .kpi-strip div:nth-child(3){border-left:none;}
-    .pain-grid,.solution-grid,.service-grid,.case-grid{grid-template-columns:repeat(2,1fr);}
+    .pain-grid,.solution-grid,.service-grid,.case-grid,.nb1-card-grid{grid-template-columns:repeat(2,1fr);}
     .industry-grid{grid-template-columns:repeat(3,1fr);}
     .method-steps{grid-template-columns:repeat(3,1fr);}
     .team-grid{grid-template-columns:repeat(3,1fr);}
@@ -385,7 +414,8 @@
     .nav-links{display:none;}
     .burger{display:flex;}
     .section{padding:70px 0;}
-    .pain-grid,.solution-grid,.service-grid,.case-grid,.price-grid{grid-template-columns:1fr;}
+    .pain-grid,.solution-grid,.service-grid,.case-grid,.price-grid,.nb1-card-grid{grid-template-columns:1fr;}
+    .nb1-overview{padding:70px 0;}.nb1-card{min-height:0;}.nb1-card h3{min-height:0;}
     .industry-grid{grid-template-columns:repeat(2,1fr);}
     .method-steps{grid-template-columns:1fr 1fr;}
     .method-line{display:none;}
@@ -403,13 +433,13 @@
 
 <header>
   <nav class="wrap">
-    <a href="#home" class="logo"><span class="dot"></span>[COMPANY NAME]</a>
+    <a href="#home" class="logo"><span class="dot"></span>NB1</a>
     <ul class="nav-links">
-      <li><a href="#home">Trang chủ</a></li><li><a href="#about">Về chúng tôi</a></li><li><a href="#services">Dịch vụ</a></li><li><a href="#industries">Ngành nghề</a></li><li><a href="#cases">Dự án</a></li><li><a href="#training">Đào tạo</a></li><li><a href="#insights">Kiến thức</a></li>
+      <li><a href="#home">Trang chủ</a></li><li><a href="#about">Về chúng tôi</a></li><li class="services-menu"><button class="services-toggle" type="button" aria-expanded="false">Dịch vụ</button><div class="services-submenu"><a href="#pricing">Gói tư vấn theo bài toán doanh nghiệp</a><a href="#training">Phát triển năng lực quản lý cho đội ngũ</a><a href="#why-us">Tại sao doanh nghiệp lựa chọn NB1?</a><a href="#solutions">Giải pháp quản trị toàn diện</a></div></li><li><a href="#cases">Dự án</a></li><li><a href="#training">Đào tạo</a></li><li><a href="#insights">Kiến thức</a></li>
     </ul>
     <div class="nav-cta">
       <a href="#consultation-form" class="btn btn-primary" data-center-scroll style="padding:11px 20px;">Đăng ký tư vấn</a>
-      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="burger" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
@@ -462,7 +492,7 @@
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about"><div class="wrap about-grid"><div class="about-copy reveal"><span class="eyebrow">Về chúng tôi</span><h2 style="margin-top:14px;">Đồng hành cùng doanh nghiệp kiến tạo tăng trưởng bền vững</h2><p>[COMPANY NAME] là đơn vị tư vấn quản trị dành cho doanh nghiệp và tổ chức. Chúng tôi kết hợp tư duy chiến lược, phương pháp triển khai thực tiễn và năng lực chuyển hóa đội ngũ để giải quyết các bài toán tăng trưởng.</p><p>Tầm nhìn, sứ mệnh, kinh nghiệm và năng lực chuyên môn sẽ được cập nhật từ dữ liệu chính thức của doanh nghiệp trước khi xuất bản.</p><div class="value-grid"><div class="value"><b>01</b>Tận tâm</div><div class="value"><b>02</b>Thực tiễn</div><div class="value"><b>03</b>Đổi mới</div><div class="value"><b>04</b>Hiệu quả</div><div class="value"><b>05</b>Đồng hành</div></div></div><aside class="about-aside reveal r2"><span class="eyebrow">Cách tiếp cận</span><h3>Đồng kiến tạo, rồi chuyển giao năng lực</h3><p>Chúng tôi làm việc cùng ban lãnh đạo và đội ngũ nội bộ, giúp giải pháp phù hợp bối cảnh và có thể vận hành sau dự án.</p><a href="#contact" class="btn btn-ghost-dark" style="margin-top:20px;">Trao đổi với chuyên gia</a></aside></div></section>
+<section class="section" id="about"><div class="wrap about-grid"><div class="about-copy reveal"><span class="eyebrow">Về chúng tôi</span><h2 style="margin-top:14px;">Đồng hành cùng doanh nghiệp kiến tạo tăng trưởng bền vững</h2><p>NB1 là đơn vị tư vấn quản trị dành cho doanh nghiệp và tổ chức. Chúng tôi kết hợp tư duy chiến lược, phương pháp triển khai thực tiễn và năng lực chuyển hóa đội ngũ để giải quyết các bài toán tăng trưởng.</p><p>Tầm nhìn, sứ mệnh, kinh nghiệm và năng lực chuyên môn sẽ được cập nhật từ dữ liệu chính thức của doanh nghiệp trước khi xuất bản.</p><div class="value-grid"><div class="value"><b>01</b>Tận tâm</div><div class="value"><b>02</b>Thực tiễn</div><div class="value"><b>03</b>Đổi mới</div><div class="value"><b>04</b>Hiệu quả</div><div class="value"><b>05</b>Đồng hành</div></div></div><aside class="about-aside reveal r2"><span class="eyebrow">Cách tiếp cận</span><h3>Đồng kiến tạo, rồi chuyển giao năng lực</h3><p>Chúng tôi làm việc cùng ban lãnh đạo và đội ngũ nội bộ, giúp giải pháp phù hợp bối cảnh và có thể vận hành sau dự án.</p><a href="#contact" class="btn btn-ghost-dark" style="margin-top:20px;">Trao đổi với chuyên gia</a></aside></div></section>
 <section class="trust" aria-label="Khu vực đối tác"><div class="wrap"><p class="trust-title">Được tin tưởng bởi doanh nghiệp và tổ chức</p><div class="logo-grid"><div class="client-logo">[CLIENT LOGO 01]</div><div class="client-logo">[CLIENT LOGO 02]</div><div class="client-logo">[CLIENT LOGO 03]</div><div class="client-logo">[CLIENT LOGO 04]</div><div class="client-logo">[CLIENT LOGO 05]</div></div></div></section>
 
 <!-- PROBLEM -->
@@ -484,18 +514,19 @@
   </div>
 </section>
 
-<!-- SOLUTION -->
-<section class="section section-tint">
+<!-- NB1 SOLUTION OVERVIEW -->
+<section class="section section-tint nb1-overview" id="solutions">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Giải pháp</span>
+      <span class="eyebrow">Hệ sinh thái NB1</span>
       <h2>Giải pháp quản trị toàn diện cho doanh nghiệp</h2>
-      <p class="lede">Chúng tôi kết hợp kinh nghiệm quản trị thực tiễn, công nghệ hiện đại và tư duy chiến lược để giúp doanh nghiệp tối ưu hiệu quả hoạt động.</p>
+      <p class="lede">Từ chẩn đoán bài toán đến phát triển đội ngũ, NB1 đồng hành theo một lộ trình rõ ràng và sát với thực tế vận hành.</p>
     </div>
-    <div class="solution-grid">
-      <div class="solution-card reveal r1"><span class="num">01 — Chiến lược</span><h3>📈 Tư vấn Chiến lược</h3><p>Xây dựng tầm nhìn, ưu tiên danh mục tăng trưởng và lộ trình 12–36 tháng phù hợp năng lực doanh nghiệp.</p></div>
-      <div class="solution-card reveal r2"><span class="num">02 — Vận hành</span><h3>⚙️ Tối ưu Vận hành</h3><p>Chuẩn hóa quy trình, phân định trách nhiệm và thiết lập KPI để loại bỏ điểm nghẽn toàn hệ thống.</p></div>
-      <div class="solution-card reveal r3"><span class="num">03 — Công nghệ</span><h3>💡 Chuyển đổi số</h3><p>Kết nối ERP, CRM và Business Intelligence với mục tiêu kinh doanh để ra quyết định theo dữ liệu.</p></div>
+    <div class="nb1-card-grid">
+      <a class="nb1-card reveal r1" href="#pricing"><span class="nb1-num">01 · TƯ VẤN</span><h3>Gói tư vấn theo bài toán doanh nghiệp</h3><p>Thiết kế phạm vi đồng hành phù hợp mục tiêu, nguồn lực và bối cảnh riêng của doanh nghiệp.</p><span class="nb1-link">Khám phá gói tư vấn <span>→</span></span></a>
+      <a class="nb1-card reveal r2" href="#training"><span class="nb1-num">02 · ĐÀO TẠO</span><h3>Phát triển năng lực quản lý cho đội ngũ</h3><p>Trang bị công cụ điều hành, ra quyết định và dẫn dắt thay đổi cho các cấp quản lý.</p><span class="nb1-link">Xem chương trình <span>→</span></span></a>
+      <a class="nb1-card reveal r3" href="#why-us"><span class="nb1-num">03 · ĐỒNG HÀNH</span><h3>Tại sao doanh nghiệp lựa chọn chúng tôi?</h3><p>Chuyên gia thực tiễn, phương pháp rõ ràng và cam kết triển khai đến khi có kết quả.</p><span class="nb1-link">Tìm hiểu thêm <span>→</span></span></a>
+      <a class="nb1-card reveal r4" href="#services"><span class="nb1-num">04 · TOÀN DIỆN</span><h3>Giải pháp quản trị toàn diện cho doanh nghiệp</h3><p>Kết nối chiến lược, vận hành, công nghệ và con người trong một lộ trình thống nhất.</p><span class="nb1-link">Xem giải pháp <span>→</span></span></a>
     </div>
   </div>
 </section>
@@ -515,26 +546,6 @@
       <div class="service-card reveal r1"><h4><span class="ic"></span>Digital Transformation</h4><ul><li>ERP</li><li>CRM</li><li>Business Intelligence</li></ul></div>
       <div class="service-card reveal r2"><h4><span class="ic"></span>Corporate Training</h4><ul><li>Kỹ năng quản lý</li><li>Lãnh đạo</li><li>Quản trị dự án</li></ul></div>
       <div class="service-card reveal r3"><h4><span class="ic"></span>Startup Advisory</h4><ul><li>Gọi vốn</li><li>Xây dựng mô hình kinh doanh</li><li>Chiến lược tăng trưởng</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- INDUSTRIES -->
-<section class="section section-tint" id="industries">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Lĩnh vực</span>
-      <h2>Ngành nghề chúng tôi phục vụ</h2>
-    </div>
-    <div class="industry-grid">
-      <div class="industry-card reveal r1"><div class="ic">🏭</div><p>Sản xuất</p></div>
-      <div class="industry-card reveal r2"><div class="ic">🏢</div><p>Dịch vụ</p></div>
-      <div class="industry-card reveal r3"><div class="ic">🛒</div><p>Bán lẻ</p></div>
-      <div class="industry-card reveal r4"><div class="ic">💻</div><p>Công nghệ</p></div>
-      <div class="industry-card reveal r1"><div class="ic">🏥</div><p>Y tế</p></div>
-      <div class="industry-card reveal r2"><div class="ic">🎓</div><p>Giáo dục</p></div>
-      <div class="industry-card reveal r3"><div class="ic">🚚</div><p>Logistics</p></div>
-      <div class="industry-card reveal r4"><div class="ic">🌾</div><p>Nông nghiệp</p></div>
     </div>
   </div>
 </section>
@@ -707,7 +718,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo"><span class="dot" style="width:9px;height:9px;background:var(--emerald);display:inline-block;transform:rotate(45deg);border-radius:2px;"></span>[COMPANY NAME]</div>
+        <div class="footer-logo"><span class="dot" style="width:9px;height:9px;background:var(--emerald);display:inline-block;transform:rotate(45deg);border-radius:2px;"></span>NB1</div>
         <p class="footer-desc">Đối tác tư vấn quản trị kinh doanh, chiến lược, vận hành và chuyển đổi số cho doanh nghiệp Việt Nam.</p>
         <div class="social" style="margin-top:20px;">
           <a href="#" aria-label="LinkedIn">in</a>
@@ -721,7 +732,7 @@
       <div class="footer-col"><h5>Pháp lý</h5><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản sử dụng</a></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 [COMPANY NAME]. Bảo lưu mọi quyền.</span>
+      <span>© 2026 NB1. Bảo lưu mọi quyền.</span>
       <span>Thiết kế cho doanh nghiệp hiện đại.</span>
     </div>
   </div>
@@ -808,14 +819,26 @@
     form.reset();
   });
 
-  // Mobile menu (simple toggle of nav links)
+  // Mobile menu: closes automatically after a destination is selected.
   const burger = document.querySelector('.burger');
   const navLinks = document.querySelector('.nav-links');
+  const servicesMenu = document.querySelector('.services-menu');
+  const servicesToggle = document.querySelector('.services-toggle');
+  const closeMobileMenu = () => {
+    navLinks.classList.remove('mobile-open');
+    servicesMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    servicesToggle.setAttribute('aria-expanded', 'false');
+  };
   burger.addEventListener('click', ()=>{
-    const isShown = navLinks.style.display === 'flex';
-    navLinks.style.display = isShown ? 'none' : 'flex';
-    navLinks.style.cssText += isShown ? '' : 'position:absolute; top:64px; left:0; right:0; background:#272B31; flex-direction:column; padding:20px 28px; gap:16px; border-bottom:1px solid rgba(255,255,255,.08);';
+    const isOpen = navLinks.classList.toggle('mobile-open');
+    burger.setAttribute('aria-expanded', String(isOpen));
   });
+  servicesToggle.addEventListener('click', ()=>{
+    const isOpen = servicesMenu.classList.toggle('open');
+    servicesToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMobileMenu));
 </script>
 
 </body>
